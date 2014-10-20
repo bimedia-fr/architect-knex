@@ -1,0 +1,33 @@
+{
+  "name": "architect-sequelize",
+  "version": "0.1.0",
+  "description": "Expose SequelizeJS ORM to architect framework",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "vows --spec test/test.index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gchauvet/architect-sequelize.git"
+  },
+  "keywords": [
+    "sequelize",
+    "architect"
+  ],
+  "author": "Guillaume CHAUVET",
+  "license": "Apache License V2.0",
+  "bugs": {
+    "url": "https://github.com/gchauvet/architect-sequelize/issues"
+  },
+  "dependencies": {
+    "sequelize": "^2.0.0-rc2"
+  },
+  "plugin": {
+    "provides": [
+      "orm"
+    ]
+  },
+  "devDependencies": {
+    "vows": "^0.7.0"
+  }
+}

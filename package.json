@@ -2,7 +2,7 @@
   "name": "architect-knex",
   "version": "0.1.0",
   "description": "Expose KnexJS query builder to architect framework",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "vows --spec test/test.index.js"
   },

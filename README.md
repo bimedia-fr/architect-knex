@@ -39,8 +39,8 @@ module.exports = [{
         }
     }
 }, './repos'];
-* Don't miss to add sqlite3 in your project dependency 
 ```
+* Don't miss to add sqlite3 in your project dependency 
  
 Consume *knex* plugin in your `./repos/package.json` :
 

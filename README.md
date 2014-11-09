@@ -1,4 +1,4 @@
-architect-restify
+architect-knex
 =================
 
 Expose knex query builder *knex* as architect plugin. 
@@ -31,7 +31,7 @@ Configure Architect with `config.js` to access a SQLite3 in memory database *:
 
 ```js
 module.exports = [{
-    packagePath: "architect-restify",
+    packagePath: "architect-knex",
     settings: {
         dialect: 'sqlite3',
         connection: {

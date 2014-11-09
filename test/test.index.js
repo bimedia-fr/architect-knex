@@ -21,14 +21,15 @@ var plugin = require('../lib/index');
 vows.describe('architect-knex').addBatch({
     'create sqlite3 in memory database': {
         topic: function () {
-            return plugin({
-                dialect: 'sqlite3',
-                connection: {
-                    database: ':memory:test'
+            return plugin({settings: {
+                    dialect: 'sqlite3',
+                    connection: {
+                        database: ':memory:test'
+                    }
                 }
             },
             {},
-            this.callback);
+                    this.callback);
         },
         'check if we have a instance of knex': function (err, instance) {
             assert.ifError(err);

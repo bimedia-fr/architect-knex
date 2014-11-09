@@ -1,5 +1,5 @@
 {
-  "name": "architect-sequelize",
+  "name": "architect-knex",
   "version": "0.1.0",
   "description": "Expose SequelizeJS ORM to architect framework",
   "main": "src/index.js",
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gchauvet/architect-sequelize.git"
+    "url": "git://github.com/gchauvet/architect-knex.git"
   },
   "keywords": [
     "sequelize",
     "architect"
   ],
-  "author": "Guillaume CHAUVET",
+  "author": "Guillaume Chauvet",
   "license": "Apache License V2.0",
   "bugs": {
-    "url": "https://github.com/gchauvet/architect-sequelize/issues"
+    "url": "https://github.com/gchauvet/architect-knex/issues"
   },
   "dependencies": {
-    "sequelize": "^2.0.0-rc2"
+    "knex": "^0.7.3"
   },
   "plugin": {
     "provides": [

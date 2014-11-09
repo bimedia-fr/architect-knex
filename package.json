@@ -1,7 +1,7 @@
 {
   "name": "architect-knex",
   "version": "0.1.0",
-  "description": "Expose SequelizeJS ORM to architect framework",
+  "description": "Expose KnexJS query builder to architect framework",
   "main": "src/index.js",
   "scripts": {
     "test": "vows --spec test/test.index.js"
@@ -11,7 +11,7 @@
     "url": "git://github.com/gchauvet/architect-knex.git"
   },
   "keywords": [
-    "sequelize",
+    "knex",
     "architect"
   ],
   "author": "Guillaume Chauvet",
@@ -24,10 +24,11 @@
   },
   "plugin": {
     "provides": [
-      "orm"
+      "knex"
     ]
   },
   "devDependencies": {
-    "vows": "^0.7.0"
+    "vows": "^0.8.0",
+    "sqlite3": "^3.0.2"
   }
 }

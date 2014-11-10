@@ -33,17 +33,18 @@ vows.describe('architect-knex').addBatch({
         },
         'check if we have a instance of knex': function (err, instance) {
             assert.ifError(err);
-            assert.isFunction(instance);
+            assert.isObject(instance);
+            assert.isFunction(instance.knex);
         },
         'create a table "users"': function (err, instance) {
-            instance.schema.createTable('users', function (table) {
+            instance.knex.schema.createTable('users', function (table) {
                 table.increments();
                 table.string('name');
                 table.timestamps();
             });
         },
         'check if table exists': function (err, instance) {
-            instance.schema.hasTable('users').then(function (exists) {
+            instance.knex.schema.hasTable('users').then(function (exists) {
                 assert.isTrue(exists);
             });
         }

@@ -20,7 +20,7 @@
     "url": "https://github.com/bimedia-fr/architect-knex/issues"
   },
   "dependencies": {
-    "knex": "git://github.com/tgriesser/knex.git"
+    "knex": "^0.7.3"
   },
   "plugin": {
     "provides": [

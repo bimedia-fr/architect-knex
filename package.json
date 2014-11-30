@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gchauvet/architect-knex.git"
+    "url": "git://github.com/bimedia-fr/architect-knex.git"
   },
   "keywords": [
     "knex",
@@ -17,10 +17,10 @@
   "author": "Guillaume Chauvet",
   "license": "Apache License V2.0",
   "bugs": {
-    "url": "https://github.com/gchauvet/architect-knex/issues"
+    "url": "https://github.com/bimedia-fr/architect-knex/issues"
   },
   "dependencies": {
-    "knex": "^0.7.3"
+    "knex": "git://github.com/tgriesser/knex.git"
   },
   "plugin": {
     "provides": [

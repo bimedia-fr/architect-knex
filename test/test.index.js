@@ -22,29 +22,31 @@ vows.describe('architect-knex').addBatch({
     'create sqlite3 in memory database': {
         topic: function () {
             return plugin({settings: {
-                    dialect: 'sqlite3',
-                    connection: {
-                        database: ':memory:test'
+                    default: {
+                        dialect: 'sqlite3',
+                        connection: {
+                            database: ':memory:'
+                        }
                     }
                 }
             },
             {},
-                    this.callback);
+            this.callback);
         },
-        'check if we have a instance of knex': function (err, instance) {
+        'check if we have a instance of knex named default': function (err, plugin) {
             assert.ifError(err);
-            assert.isObject(instance);
-            assert.isFunction(instance.knex);
+            assert.isObject(plugin);
+            assert.isFunction(plugin.instances.default);
         },
-        'create a table "users"': function (err, instance) {
-            instance.knex.schema.createTable('users', function (table) {
+        'create a table "users"': function (err, plugin) {
+            plugin.instances.default.schema.createTable('users', function (table) {
                 table.increments();
                 table.string('name');
                 table.timestamps();
             });
         },
-        'check if table exists': function (err, instance) {
-            instance.knex.schema.hasTable('users').then(function (exists) {
+        'check if table exists': function (err, plugin) {
+            plugin.instances.default.schema.hasTable('users').then(function (exists) {
                 assert.isTrue(exists);
             });
         }

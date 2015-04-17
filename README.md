@@ -33,9 +33,11 @@ Configure Architect with `config.js` to access a SQLite3 in memory database *:
 module.exports = [{
     packagePath: "architect-knex",
     settings: {
-        dialect: 'sqlite3',
-        connection: {
-            database: ':memory:test'
+        default: {
+            dialect: 'sqlite3',
+            connection: {
+                database: ':memory:'
+            }
         }
     }
 }, './repos'];

@@ -1,6 +1,6 @@
 {
   "name": "architect-knex",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "Expose KnexJS query builder to architect framework",
   "main": "lib/index.js",
   "scripts": {

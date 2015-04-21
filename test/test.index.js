@@ -36,17 +36,17 @@ vows.describe('architect-knex').addBatch({
         'check if we have a instance of knex named default': function (err, plugin) {
             assert.ifError(err);
             assert.isObject(plugin);
-            assert.isFunction(plugin.instances.default);
+            assert.isFunction(plugin.knex.default);
         },
         'create a table "users"': function (err, plugin) {
-            plugin.instances.default.schema.createTable('users', function (table) {
+            plugin.knex.default.schema.createTable('users', function (table) {
                 table.increments();
                 table.string('name');
                 table.timestamps();
             });
         },
         'check if table exists': function (err, plugin) {
-            plugin.instances.default.schema.hasTable('users').then(function (exists) {
+            plugin.knex.default.schema.hasTable('users').then(function (exists) {
                 assert.isTrue(exists);
             });
         }

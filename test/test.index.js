@@ -27,6 +27,12 @@ vows.describe('architect-knex').addBatch({
                         connection: {
                             database: ':memory:'
                         }
+                    },
+                    other: {
+                        dialect: 'sqlite3',
+                        connection: {
+                            database: ':memory:'
+                        }
                     }
                 }
             },
@@ -37,6 +43,7 @@ vows.describe('architect-knex').addBatch({
             assert.ifError(err);
             assert.isObject(plugin);
             assert.isFunction(plugin.knex.default);
+            assert.isFunction(plugin.knex.other);
         },
         'create a table "users"': function (err, plugin) {
             plugin.knex.default.schema.createTable('users', function (table) {

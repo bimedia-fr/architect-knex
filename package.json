@@ -20,8 +20,7 @@
     "url": "https://github.com/bimedia-fr/architect-knex/issues"
   },
   "dependencies": {
-    "knex": "^0.7.3",
-    "lodash": "~3.7.0"
+    "knex": "^0.7.3"
   },
   "plugin": {
     "provides": [

@@ -1,6 +1,6 @@
 {
   "name": "architect-knex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Expose KnexJS query builder to architect framework",
   "main": "lib/index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/bimedia-fr/architect-knex/issues"
   },
   "dependencies": {
-    "knex": "^0.7.3"
+    "knex": "0.7.x"
   },
   "plugin": {
     "provides": [
@@ -28,7 +28,7 @@
     ]
   },
   "devDependencies": {
-    "vows": "^0.8.0",
-    "sqlite3": "^3.0.2"
+    "vows": "0.8.x",
+    "sqlite3": "3.0.x"
   }
 }

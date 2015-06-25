@@ -4,7 +4,8 @@
   "description": "Expose KnexJS query builder to architect framework",
   "main": "lib/index.js",
   "scripts": {
-    "test": "vows --spec test/test.index.js"
+    "test": "vows --spec test/test.index.js",
+    "lint": "eslint lib"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "0.22.x",
     "vows": "0.8.x",
     "sqlite3": "3.0.x"
   }

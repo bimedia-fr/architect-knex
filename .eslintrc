@@ -1,0 +1,26 @@
+{
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "modules": true
+    },
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "indent": 2,
+        "vars-on-top": 2,
+        "no-reserved-keys": 2,
+        "no-extra-semi": 2,
+        "no-underscore-dangle": 0,
+        "max-len": [2, 140, 4],
+        "accessor-pairs": [2, {"getWithoutSet": true}],
+        "quotes": [2, "single", "avoid-escape"],
+        "max-statements": [1, 25],
+        "no-multi-str": 0,
+        "no-trailing-spaces": [2, { skipBlankLines: true }],
+        "camelcase": [2, {
+                "properties": "never"
+            }]
+    }
+}
